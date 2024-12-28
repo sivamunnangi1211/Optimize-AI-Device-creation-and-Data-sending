@@ -1,0 +1,40 @@
+<div>
+  <!-- Main pipe -->
+  <div id="mainPipe" style="height: 20px; width: 200px; background-color: green; margin-bottom: 20px;"></div>
+
+  <!-- Split pipes -->
+  <div style="display: flex; justify-content: space-between;">
+    <div id="pipe1" style="height: 20px; width: 100px; background-color: green;"></div>
+    <div id="pipe2" style="height: 20px; width: 100px; background-color: green;"></div>
+    <div id="pipe3" style="height: 20px; width: 100px; background-color: green;"></div>
+  </div>
+</div>
+
+<script>
+  // Data simulation (replace with actual ThingsBoard data binding)
+  var flowRates = {
+    mainFlowRate: 90,
+    subFlowRate1: 30,
+    subFlowRate2: 30,
+    subFlowRate3: 35, // Example unequal value
+  };
+
+  // Update pipe colors
+  function updatePipeColors(flowRates) {
+    // Set threshold for equal vs unequal
+    var threshold = 0.5; // Tolerance for equality
+
+    // Update main pipe color (always green in this case)
+    document.getElementById("mainPipe").style.backgroundColor = "green";
+
+    // Update sub pipes
+    ["subFlowRate1", "subFlowRate2", "subFlowRate3"].forEach((key, index) => {
+      var pipe = document.getElementById("pipe" + (index + 1));
+      var isEqual = Math.abs(flowRates[key] - flowRates.mainFlowRate / 3) <= threshold;
+      pipe.style.backgroundColor = isEqual ? "green" : "red";
+    });
+  }
+
+  // Call the function to update colors
+  updatePipeColors(flowRates);
+</script>

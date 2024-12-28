@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #downloadPdfBtn {
+            margin-top: 20px;
+            background-color: #008CBA;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+</head>
+<body>
+
+    <table id="auditTable" class="display">
+        <thead>
+            <tr>
+                <th>Serial Number</th>
+                <th>Timestamp</th>
+                <th>Entity Type</th>
+                <th>Entity Name</th>
+                <th>User</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody id="auditTableBody"></tbody>
+    </table>
+
+    <button id="downloadPdfBtn" onclick="downloadPdf()">Download PDF</button>
+
+    <script>
+        var authToken = '';
+
+        // Function to retrieve and display audit logs
+        function auditLogs() {
+            var auditLogsAPIURL = "https://app.controlytics.ai:443/api/audit/logs";
+
+            $.ajax({
+                url: auditLogsAPIURL,
+                type: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + authToken
+                },
+                data: {
+                    'pageSize': 100,  // Adjust as needed
+                    'page': 1        // Adjust as needed
+                },
+                success: function (response) {
+                    console.log("Response received:", response);
+
+                    var logs = response.data || [];
+
+                    var tableBody = $("#auditTableBody");
+                    tableBody.empty();
+
+                    logs.forEach(function (log, index) {
+                        console.log("Log structure:", log);
+
+                        var formatted_time = new Date(log.createdTime).toLocaleString();
+                        var entityType = log.entityId ? log.entityId.entityType : '';
+
+                        var row = "<tr><td>" + (index + 1) + "</td><td>" + formatted_time + "</td><td>" + entityType + "</td><td>" + log.entityName + "</td><td>" + log.userName + "</td><td>" + log.actionType + "</td><td>" + log.actionStatus + "</td><td>" + log.details + "</td></tr>";
+                        tableBody.append(row);
+                    });
+
+                    // Initialize DataTable
+                    $('#auditTable').DataTable();
+                },
+                error: function (error) {
+                    console.error("Error fetching audit logs:", error);
+                }
+            });
+        }
+
+        // Function to download PDF using html2pdf
+        function downloadPdf() {
+            var element = document.getElementById("auditTable");
+
+            html2pdf(element, {
+                margin: 10,
+                filename: 'audit_logs.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 1.5 },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait',
+                    putOnlyUsedFonts: true,
+                    autoTable: {
+                        styles: { overflow: 'linebreak' },
+                        columnStyles: { text: { overflow: 'linebreak' } },
+                        tableWidth: 'auto',
+                        margin: { top: 10 },
+                        startY: false, // Start table from the top of the page
+                        pageBreak: 'auto' // Auto page break based on content
+                    }
+                }
+            });
+        }
+
+        // On document ready, retrieve audit logs
+        $(document).ready(function () {
+            authToken = new URLSearchParams(window.location.search).get('token');
+            if (authToken) {
+                auditLogs();
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+
+</body>
+</html>

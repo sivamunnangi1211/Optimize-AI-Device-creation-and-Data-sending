@@ -1,0 +1,47 @@
+function init() {
+    // Widget configuration object
+    var widgetConfig = {
+        "showTitle": true,
+        "title": "Export Data as PDF"
+    };
+
+    // Initializing the widget
+    widgetContext.init(widgetConfig);
+
+    // Button to trigger PDF export
+    var exportButton = document.createElement("button");
+    exportButton.innerHTML = "Export as PDF";
+    exportButton.addEventListener("click", exportDataAsPDF);
+    widgetContext.container.appendChild(exportButton);
+}
+
+// Function to fetch data (modify this to fetch your ThingsBoard data)
+function fetchDataFromThingsBoard() {
+    var data = [
+        { "Name": "John", "Age": 30, "Location": "New York" },
+        { "Name": "Alice", "Age": 25, "Location": "London" },
+        // Add your data here or fetch it dynamically
+    ];
+    return data;
+}
+
+// Function to export data as PDF
+function exportDataAsPDF() {
+    
+    var data = fetchDataFromThingsBoard();
+
+    
+    var doc = new jsPDF();
+    doc.text("Exported Data", 10, 10);
+    var headers = Object.keys(data[0]); 
+    var rows = data.map(obj => headers.map(key => obj[key]));
+    doc.autoTable({
+        head: [headers],
+        body: rows
+    });
+
+    
+    doc.save("exported_data.pdf");
+}
+
+init();

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #loginMessage {
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="login()">Login</button>
+
+        <p id="loginMessage"></p>
+    </form>
+
+    <script>
+        var authToken = ''; // Initialize the token variable
+
+        function login() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+            var apiURL = "https://app.controlytics.ai:443/api/auth/login";
+
+            $.ajax({
+                url: apiURL,
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    username: username,
+                    password: password
+                }),
+                success: function (data) {
+                    console.log("Login successful:", data);
+                    $("#loginMessage").text("Login successful!").css("color", "#4caf50");
+                    authToken = data.token;
+
+                    // Redirect to the dashboard page after successful login
+                    window.location.href = 'dashboard.html?token=' + authToken;
+                },
+                error: function (error) {
+                    console.error("Login failed:", error);
+                    console.log("Server response:", error.responseText);
+                    $("#loginMessage").text("Login failed!").css("color", "#f44336");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

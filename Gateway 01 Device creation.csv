@@ -1,0 +1,42 @@
+name,type,token,Location,make,model,plant,building,area,templow,temphigh,humlow,humhigh,timeout
+GGP/UT/001/AHU-050-I14-00,RHT Sensors,IOTGW01,Blender Area-02,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-049-I13-00,RHT Sensors,IOTGW01_102,Hold Area-01,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-048-I13-00,RHT Sensors,IOTGW01_103,Blender Area-01,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-047-I13-00,RHT Sensors,IOTGW01_104,Granulation Area(Near Office Room),Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-046-I17-00,RHT Sensors,IOTGW01_105,Binder preparation Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-046-I14-00,RHT Sensors,IOTGW01_106,Binder Charging Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-048-I14-00,RHT Sensors,IOTGW01_107,Blender Charging Area-01,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_ low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-046-I13-00,RHT Sensors,IOTGW01_108,Sifting Holding Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-050-I13-00,RHT Sensors,IOTGW01_109,Blender Charging Area-02,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-046-I16-00,RHT Sensors,IOTGW01_110,Charging Area( Near RMG & FBP Area),Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-044-I13-00,RHT Sensors,IOTGW01_111,API Dispensing Booth Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-044-I18-00,RHT Sensors,IOTGW01_112,API Dispensing Material Entry Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-045-I13-00,RHT Sensors,IOTGW01_113,Excipient Dispensing Booth Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-045-I18-00,RHT Sensors,IOTGW01_114,Excipient Dispensing Material Entry Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-043-I13-00,RHT Sensors,IOTGW01_115,Staging Area (Near lift 1st Floor),Radix,HAWKEYE,Gagillapur,CWH Block,Module-F,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GIL/III/TIC/110-00,RHT Sensors,IOTGW01_161,Chambers Area,Radix,HAWKEYE,Gagillapur,CWH Block,Stability Area,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GIL/III/TIC/147-00,RHT Sensors,IOTGW01_162,Sample Storage Room,Radix,HAWKEYE,Gagillapur,CWH Block,Stability Area,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/001-I07-00,RHT Sensors,IOTGW01_163,IT Server  Room,Global,CR120,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/005-I17-00,RHT Sensors,IOTGW01_164,FG Cold Spot(CCW087),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/005-I18-00,RHT Sensors,IOTGW01_165,FG Hot Spot(CCS093),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/005-I15-00,RHT Sensors,IOTGW01_166,RM Cold Spot(CCH088),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/005-I16-00,RHT Sensors,IOTGW01_167,RM Hot Spot(CBI028),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/004-I07-00,RHT Sensors,IOTGW01_168,Staging Cold Spot(GCW/WH/039),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/006-I07-00,RHT Sensors,IOTGW01_169,Staging Hot Spot(GCW/WH/035),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/007-I16-00,RHT Sensors,IOTGW01_170,Sampling Booth(GCW/WH/001),Global,CR120,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/007-I17-00,RHT Sensors,IOTGW01_171,Sampling Booth(GCW/WH/007),Global,CR120,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/035-I15-00,RHT Sensors,IOTGW01_172,Module-F Cold spot(CAB047),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/037-I15-00,RHT Sensors,IOTGW01_173,Module-F Hot spot(CAU065),Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/038-I18-00,RHT Sensors,IOTGW01_174,Raw material staging cold spot,Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/038-I17-00,RHT Sensors,IOTGW01_175,Raw material staging Hot spot,Radix,HAWKEYE RTC,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/039-I17-00,RHT Sensors,IOTGW01_176,Sampling Booth(GCW/WH/092),Radix,HAWKEYE,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GCW/MN/040-I17-00,RHT Sensors,IOTGW01_177,Sampling Booth(GCW/WH/093),Radix,HAWKEYE,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-052-I24-00,RHT Sensors,IOTGW01_178,1.6KL Blender,Radix,HAWKEYE,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-059-I16-00,RHT Sensors,IOTGW01_179,3.5KL Blender,Radix,HAWKEYE,Gagillapur,CWH Block,CWH 1st Floor,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-031-I10-01,RHT Sensors,IOTGW01_180,Excipient Dispensing Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-031-I18-00,RHT Sensors,IOTGW01_181,Excipient Staging Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-032-I10-01,RHT Sensors,IOTGW01_182,API Dispensing Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-032-I18-00,RHT Sensors,IOTGW01_183,API Staging Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-032-I11-01,RHT Sensors,IOTGW01_184,Granulation Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-032-I16-00,RHT Sensors,IOTGW01_185,Shifter Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout
+GGP/UT/001/AHU-033-I10-01,RHT Sensors,IOTGW01_186,Blender Area,Radix,HAWKEYE,Gagillapur,CWH Block,Module-E,Temp_low_limit,Temp_high_limit,Humid_low_limit,Humid_high_limit,Timeout

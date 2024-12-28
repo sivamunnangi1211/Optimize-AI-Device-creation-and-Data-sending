@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #loginMessage {
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <label for="username">ThingsBoard Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">ThingsBoard Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button onclick="login()">Login</button>
+
+    <div id="loginMessage"></div>
+</div>
+
+<script>
+    function login() {
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        // Use ThingsBoard API for authentication
+        // Replace the placeholder API_URL with your ThingsBoard server API URL
+        var apiURL = "https://app.controlytics.ai:443/api/auth/login";
+
+        $.ajax({
+            url: apiURL,
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                username: username,
+                password: password
+            }),
+            success: function (data) {
+                // Handle successful login response
+                console.log("Login successful:", data);
+                $("#loginMessage").text("Login successful!").css("color", "#4caf50");
+            },
+            error: function (error) {
+                // Handle login error
+                console.error("Login failed:", error);
+                console.log("Server response:", error.responseText); // Log the entire response
+                $("#loginMessage").text("Login failed!").css("color", "#f44336");
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

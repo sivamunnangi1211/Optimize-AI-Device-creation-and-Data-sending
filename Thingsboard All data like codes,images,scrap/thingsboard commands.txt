@@ -1,0 +1,14 @@
+to send data in uplink data convertor :--
+curl -v -X POST -d "{\"deviceName\":\"Device 1\",\"deviceType\":\"THD\",\"temperature\":33,\"model\":\"test\"}" https://app.controlytics.ai/api/v1/integrations/http/bdbfa20f-d528-b0e0-d30a-3cc7a1545745 -H "Content-Type:application/json"
+
+---------------------------------------------------------------------
+
+to send data to device thingsboard :--
+curl -v POST --data "{"temperature":42,"humidity":73}" https://app.controlytics.ai/api/v1/Device_1/telemetry --header "Content-Type:application/json"
+---------------------------------------------------------------------
+
+to send data to mqtt to device:--
+mosquitto_pub -h broker.hivemq.com -p 1883 -t "tb/mqtt-integration-tutorial/THD/Device 2/temperature" -m "{\"value\":27.2}"
+----------------------------------------------------------------------
+
+echo -e -n '{"deviceName": "Device 3", "deviceType": "THD", "temperature": 25.7, "humidity": 69}' | nc -q1 -w1 13.234.16.181 10560
